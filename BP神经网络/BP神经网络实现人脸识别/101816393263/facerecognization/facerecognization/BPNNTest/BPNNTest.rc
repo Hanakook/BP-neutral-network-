@@ -1,0 +1,361 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST ""res\\\\BPNNTest.exe.manifest""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\BPNNTest.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 305, 114
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,248,93,50,14
+    CTEXT           "BPNNTest Application v1.0\n\n(c) Copyright 2010",
+                    IDC_STATIC,25,57,78,32
+    ICON            IDR_MAINFRAME,IDC_STATIC,55,26,20,20
+    GROUPBOX        "",IDC_STATIC,7,7,229,100
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,121,20,1,77,
+                    WS_EX_STATICEDGE
+    LTEXT           "Gao Cong",IDC_STATIC,163,20,33,10
+    LTEXT           "20094227004",IDC_STATIC,157,34,45,10
+    LTEXT           "Pattern Recognition Class",IDC_STATIC,138,47,83,10
+    LTEXT           "Soochow University",IDC_STATIC,148,60,63,10
+    LTEXT           "Send a e-mail to author",IDC_STATIC_MAIL_LINK,144,74,73,
+                    10
+    LTEXT           "Goto author's Blog",IDC_STATIC_BLOG_LINK,150,86,60,10
+END
+
+IDD_MAINDLG DIALOG DISCARDABLE  0, 0, 537, 335
+STYLE WS_MINIMIZEBOX | WS_CAPTION | WS_SYSMENU
+CAPTION "BPNNTest"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Select",IDC_BTN_SELECT_TRAIN,207,19,50,14
+    PUSHBUTTON      "&Train",IDC_BTN_TRAIN,207,116,50,14
+    LISTBOX         IDC_LIST_ERROR,23,150,262,145,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Select",IDC_BTN_SELECT_VARIFY,435,19,50,14
+    PUSHBUTTON      "&Varify",IDC_BTN_VARIFY,435,38,50,14
+    PUSHBUTTON      "&About...",ID_APP_ABOUT,13,311,50,14
+    PUSHBUTTON      "&Save",IDC_BTN_SAVE,72,311,50,14
+    PUSHBUTTON      "&Load",IDC_BTN_LOAD,130,311,50,14
+    DEFPUSHBUTTON   "&Exit",IDOK,475,311,50,14
+    CONTROL         "",IDC_PGMVIEW_FACE_TRAIN,
+                    "{26131110-9BF7-48B1-84BF-3951BDB58DEC}",WS_TABSTOP,137,
+                    19,41,31
+    LTEXT           "Select train Type:",IDC_STATIC,25,15,56,8
+    LTEXT           "Error list:",IDC_STATIC,25,136,28,8
+    CONTROL         "",IDC_PGMVIEW_FACE_VALIFY,
+                    "{26131110-9BF7-48B1-84BF-3951BDB58DEC}",WS_TABSTOP,331,
+                    19,38,27
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,295,18,
+                    1,279
+    LISTBOX         IDC_LIST_VARIFY_RESULT,305,150,210,145,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Varify result:",IDC_STATIC,304,136,39,8
+    GROUPBOX        "",IDC_STATIC,13,7,512,298
+    COMBOBOX        IDC_COMBO_TARGET_TYPE,25,25,76,73,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Iterate time:",IDC_STATIC,25,73,38,8
+    EDITTEXT        IDC_EDIT_ITERATE_TIME,25,85,64,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Learning rate:",IDC_STATIC,25,105,44,8
+    EDITTEXT        IDC_EDIT_LEARNING_RATE,25,116,64,14,ES_AUTOHSCROLL
+    LTEXT           "Momentum:",IDC_STATIC,109,105,38,8
+    EDITTEXT        IDC_EDIT_MOMENTUM,109,116,64,14,ES_AUTOHSCROLL
+    LTEXT           "Hidden layer units:",IDC_STATIC,192,73,59,8
+    EDITTEXT        IDC_EDIT_HIDDEN_UNITS,192,85,64,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_EDIT_STOP_ERROR,109,85,64,14,ES_AUTOHSCROLL
+    CONTROL         "Stop Error:",IDC_CHECK_STOP_ERROR,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,109,73,49,10
+    LTEXT           "Training_file_name",IDC_STATIC_FILE_NAME,25,56,251,8
+    LTEXT           "Single_Test_file_name",IDC_STATIC_FILE_NAME2,307,56,207,
+                    8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,296,71,
+                    228,1
+    PUSHBUTTON      "&Select",IDC_BTN_SELECT_VARIFY_BATCH,435,81,50,14
+    PUSHBUTTON      "&Varify",IDC_BTN_VARIFY_BATCH,435,102,50,14
+    CONTROL         "",IDC_PGMVIEW_FACE_VALIFY2,
+                    "{26131110-9BF7-48B1-84BF-3951BDB58DEC}",WS_TABSTOP,331,
+                    81,38,27
+    LTEXT           "Batch_Test_file_name",IDC_STATIC_FILE_NAME3,307,123,207,
+                    8
+    LTEXT           "Status:",IDC_STATIC,191,314,23,8
+    LTEXT           "Status__",IDC_STATIC_STATUS,219,314,251,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 298
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_MAINDLG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 332
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "BPNNTest Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "BPNNTest\0"
+            VALUE "LegalCopyright", "Copyright 2010\0"
+            VALUE "OriginalFilename", "BPNNTest.exe\0"
+            VALUE "ProductName", "BPNNTest Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_MAINDLG DLGINIT
+BEGIN
+    IDC_PGMVIEW_FACE_TRAIN, 0x376, 16, 0
+0x0000, 0x0000, 0x0300, 0x0000, 0x0668, 0x0000, 0x052b, 0x0000, 
+    IDC_PGMVIEW_FACE_VALIFY, 0x376, 16, 0
+0x0000, 0x0000, 0x0300, 0x0000, 0x05e4, 0x0000, 0x048c, 0x0000, 
+    IDC_PGMVIEW_FACE_VALIFY2, 0x376, 16, 0
+0x0000, 0x0000, 0x0300, 0x0000, 0x05e4, 0x0000, 0x048c, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "BPNNTest"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ATL_IDS_SCSIZE          "Change the window size"
+    ATL_IDS_SCMOVE          "Change the window position"
+    ATL_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    ATL_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    ATL_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    ATL_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    ATL_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ATL_IDS_SCRESTORE       "Restore the window to normal size"
+    ATL_IDS_SCTASKLIST      "Activate Task List"
+    ATL_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ATL_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ATL_IDS_MRU_FILE        "Open this document"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "res\\BPNNTest.exe.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,47 @@
+// facerecognization.idl : IDL source for facerecognization.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (facerecognization.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+#include "olectl.h"
+	
+
+	[
+		object,
+		uuid(B62F6DD1-FF0B-4ECB-8784-E252942678A0),
+		dual,
+		helpstring("IPGMView Interface"),
+		pointer_default(unique)
+	]
+	interface IPGMView : IDispatch
+	{
+		[id(1), helpstring("method SetPGMFilePath")] HRESULT SetPGMFilePath([in] BSTR sFilePath,VARIANT_BOOL bRefresh);
+		[id(2), helpstring("method Refresh")] HRESULT Refresh(void);
+		[id(3), helpstring("method GetWidth")] HRESULT GetWidth([out,retval] LONG* nWidth);
+		[id(4), helpstring("method GetHeight")] HRESULT GetHeight([out,retval] LONG* nHeight);
+		[id(5), helpstring("method IncreaseBrightness")] HRESULT IncreaseBrightness([in] CHAR nQuantity);
+		[id(6), helpstring("method DecreaseBrightness")] HRESULT DecreaseBrightness([in] CHAR nQuantity);
+	};
+
+[
+	uuid(48151D37-580D-43CF-9792-68AE20569897),
+	version(1.0),
+	helpstring("facerecognization 1.0 Type Library")
+]
+library FACERECOGNIZATIONLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(26131110-9BF7-48B1-84BF-3951BDB58DEC),
+		helpstring("PGMView Class")
+	]
+	coclass PGMView
+	{
+		[default] interface IPGMView;
+	};
+};

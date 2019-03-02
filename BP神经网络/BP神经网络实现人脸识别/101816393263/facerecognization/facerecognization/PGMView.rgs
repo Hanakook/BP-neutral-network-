@@ -1,0 +1,34 @@
+HKCR
+{
+	Facerecognization.PGMView.1 = s 'PGMView Class'
+	{
+		CLSID = s '{26131110-9BF7-48B1-84BF-3951BDB58DEC}'
+	}
+	Facerecognization.PGMView = s 'PGMView Class'
+	{
+		CLSID = s '{26131110-9BF7-48B1-84BF-3951BDB58DEC}'
+		CurVer = s 'Facerecognization.PGMView.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {26131110-9BF7-48B1-84BF-3951BDB58DEC} = s 'PGMView Class'
+		{
+			ProgID = s 'Facerecognization.PGMView.1'
+			VersionIndependentProgID = s 'Facerecognization.PGMView'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			ForceRemove 'Control'
+			ForceRemove 'Insertable'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 101'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '131473'
+			}
+			'TypeLib' = s '{48151D37-580D-43CF-9792-68AE20569897}'
+			'Version' = s '1.0'
+		}
+	}
+}
